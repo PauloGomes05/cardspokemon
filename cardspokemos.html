@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce de Cards Pokémon</title>
+</head>
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 0;">
+
+    <!-- Cabeçalho -->
+    <header style="background-color: #ffcb05; padding: 20px; text-align: center;">
+        <h1 style="color: #3b4cca; margin: 0;">Pokémon Card Store</h1>
+        <p style="margin: 5px 0;">As melhores cartas de Pokémon</p>
+    </header>
+
+    <!-- Navegação -->
+    <nav style="background-color: #3b4cca; overflow: hidden; padding: 10px;">
+        <a href="#" style="color: white; float: left; text-decoration: none; margin-right: 15px;">Início</a>
+        <a href="#" style="color: white; float: left; text-decoration: none; margin-right: 15px;">Catálogo</a>
+        <a href="#" style="color: white; float: left; text-decoration: none; margin-right: 15px;">Contato</a>
+    </nav>
+
+    <!-- Seção Principal -->
+    <main style="padding: 20px;">
+        <section id="catalogo" style="display: flex; flex-wrap: wrap; justify-content: space-around;">
+            <!-- Card Pokémon -->
+            <div class="card-pokemon" style="border: 1px solid #ddd; border-radius: 10px; width: 300px; margin: 15px; padding: 15px; text-align: center;">
+                <img src="https://github.com/profmauricioneto/fullstack-c-jovem/blob/main/aulas-html-css/assets/pikachu.png?raw=true" alt="Pikachu" style="width: 150px; height: auto;">
+                <h2 style="font-size: 1.5em;">Pikachu</h2>
+                <p style="color: #888;">Preço: R$ 39,99</p>
+                <p>Um Pokémon do tipo Elétrico. Conhecido por sua fofura e poderosas descargas elétricas.</p>
+                <button class="like-btn" onclick="toggleLike(this)" style="background: none; border: none; cursor: pointer; font-size: 20px;">❤️ Curtir</button>
+                <button style="background-color: #ffcb05; color: #3b4cca; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Comprar</button>
+            </div>
+
+            <!-- Outro Card Pokémon -->
+            <div class="card-pokemon" style="border: 1px solid #ddd; border-radius: 10px; width: 300px; margin: 15px; padding: 15px; text-align: center;">
+                <img src="https://m.media-amazon.com/images/I/515AThAQx8L._AC_UF894,1000_QL80_.jpg" alt="Charmander" style="width: 150px; height: auto;">
+                <h2 style="font-size: 1.5em;">Charmander</h2>
+                <p style="color: #888;">Preço: R$ 49,99</p>
+                <p>Um Pokémon do tipo Fogo. Sua chama nunca se apaga e fica mais intensa conforme cresce.</p>
+                <button class="like-btn" onclick="toggleLike(this)" style="background: none; border: none; cursor: pointer; font-size: 20px;">❤️ Curtir</button>
+                <button style="background-color: #ffcb05; color: #3b4cca; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Comprar</button>
+            </div>
+
+            <!-- Outro Card Pokémon -->
+            <div class="card-pokemon" style="border: 1px solid #ddd; border-radius: 10px; width: 300px; margin: 15px; padding: 15px; text-align: center;">
+                <img src="https://github.com/profmauricioneto/fullstack-c-jovem/blob/main/aulas-html-css/assets/squirtle.png?raw=true" alt="Squirtle" style="width: 150px; height: auto;">
+                <h2 style="font-size: 1.5em;">Squirtle</h2>
+                <p style="color: #888;">Preço: R$ 34,99</p>
+                <p>Um Pokémon do tipo Água. Adora nadar e usa seu casco para se proteger de ataques.</p>
+                <button class="like-btn" onclick="toggleLike(this)" style="background: none; border: none; cursor: pointer; font-size: 20px;">❤️ Curtir</button>
+                <button style="background-color: #ffcb05; color: #3b4cca; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Comprar</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer style="background-color: #3b4cca; color: white; text-align: center; padding: 15px;">
+        <p>E-commerce de Cards Pokémon © 2024</p>
+    </footer>
+
+    <!-- Estilos e script para o botão de like -->
+    <style>
+        /* Efeito de hover (cresce ao passar o mouse) */
+        .like-btn:hover {
+            transform: scale(1.2);
+        }
+
+        /* Efeito de active (diminui ao clicar) */
+        .like-btn:active {
+            transform: scale(1);
+        }
+
+        /* Estilo quando o botão está "curtido" */
+        .like-btn.liked {
+            color: red;
+        }
+    </style>
+
+    <script>
+        function toggleLike(button) {
+            button.classList.toggle('liked');
+            if (button.classList.contains('liked')) {
+                button.innerHTML = '❤️ Curtido!';
+            } else {
+                button.innerHTML = '❤️ Curtir';
+            }
+        }
+    </script>
+</body>
+</html>
